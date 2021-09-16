@@ -18,18 +18,18 @@
 <body>
 
 <div class="zoom">
-	<img src="images/DSC00529m_adobespark.jpg" class="zoom_layer zoom__layer--left" class="img-fluid">
-	<img src="#" class="zoom_layer zoom__layer--right">
-	<div class="zoom__text">
-		<div>let the</div>
-		<div class="zoom__text--large">Adventure</div>
-		<div class="text-right">Begin</div>
+	<img src="images/magnusqt.png" class="zoom_layer zoom__layer--left js-zoom-magnus">
+	<img src="images/pote.png" class="zoom_layer zoom__layer--right js-zoom-pote">
+	<div class="zoom__text js-zoom-text">
+		<div>Katten</div>
+		<div class="zoom__text--large">Magnus</div>
+		<div class="text-right">R.I.</div>
 	</div>
 </div>
 <div class="content">
-	<h2>Lorem Ipsum</h2>
+	<h2>Training your cat!</h2>
 	<p>
-		Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Iaculis at erat pellentesque adipiscing commodo elit at imperdiet. Pharetra vel turpis nunc eget. Fermentum iaculis eu non diam phasellus vestibulum. Iaculis urna id volutpat lacus laoreet. Aliquet porttitor lacus luctus accumsan. Sed adipiscing diam donec adipiscing tristique risus nec feugiat in. Viverra justo nec ultrices dui sapien eget mi. Convallis a cras semper auctor neque vitae. Amet est placerat in egestas erat imperdiet sed euismod nisi. Vitae et leo duis ut diam quam nulla porttitor. Aliquet eget sit amet tellus cras adipiscing enim eu turpis. Venenatis tellus in metus vulputate eu scelerisque felis. Nam aliquam sem et tortor consequat id porta nibh. Turpis massa tincidunt dui ut ornare lectus sit. Laoreet non curabitur gravida arcu ac tortor.
+		Contrary to popular belief, cats are just as fun to train as dogs! Cat training is a great way to connect with your cat and teach them the meaning of a few key words.
 		<br><br>
 		Quam id leo in vitae. Egestas tellus rutrum tellus pellentesque eu tincidunt tortor. Mi proin sed libero enim sed faucibus turpis in. Urna molestie at elementum eu facilisis sed odio. Nibh mauris cursus mattis molestie a iaculis at erat pellentesque. Eu lobortis elementum nibh tellus molestie nunc non blandit. Id donec ultrices tincidunt arcu non sodales. Tincidunt nunc pulvinar sapien et ligula ullamcorper. Laoreet suspendisse interdum consectetur libero id. Ipsum dolor sit amet consectetur adipiscing. A scelerisque purus semper eget duis at tellus at. Bibendum est ultricies integer quis auctor elit.
 		<br><br>
@@ -40,6 +40,28 @@
 		Cras ornare arcu dui vivamus arcu felis bibendum ut tristique. Urna condimentum mattis pellentesque id nibh tortor id. Dictumst vestibulum rhoncus est pellentesque elit. Et sollicitudin ac orci phasellus egestas tellus. Eget nunc scelerisque viverra mauris in aliquam sem fringilla ut. Amet luctus venenatis lectus magna fringilla urna porttitor. Sed adipiscing diam donec adipiscing tristique risus. Semper viverra nam libero justo laoreet sit amet cursus sit. Morbi tincidunt ornare massa eget egestas purus viverra accumsan in. Lectus quam id leo in vitae. Nisi lacus sed viverra tellus in hac habitasse. Eu turpis egestas pretium aenean pharetra magna ac placerat vestibulum. Id velit ut tortor pretium viverra suspendisse potenti nullam ac. Enim ut tellus elementum sagittis vitae. Malesuada proin libero nunc consequat interdum varius. Orci porta non pulvinar neque laoreet suspendisse. Et ligula ullamcorper malesuada proin libero nunc consequat interdum varius.
 	</p>
 </div>
+
+<script>
+	const zoomMagnus = document.querySelector('.js-zoom-magnus');
+	const zoomPote = document.querySelector('.js-zoom-pote');
+	const zoomText = document.querySelector('.js-zoom-text');
+
+	document.addEventListener('scroll', () => {
+		const scroll = window.pageYOffset;
+
+		zoomMagnus.style.width = (100 + scroll/5) + '%';
+		zoomMagnus.style.left = - scroll/5 + '%';
+		zoomMagnus.style.bottom = - scroll/5 + '%';
+
+		zoomPote.style.width = (100 + scroll/5) + '%';
+		zoomPote.style.right = - scroll/5 + '%';
+		zoomPote.style.bottom = - scroll/5 + '%';
+
+		zoomText.style.bottom = scroll/7 + '%';
+	});
+
+
+</script>
 
 
 <div class="navigation">
@@ -69,20 +91,6 @@
 		</div>
 	</div>
 </div>
-
-
-<div class="footer fixed-bottom">
-	<div>
-		<a href="#">Telefon 00 00 00 00</a>
-	</div>
-	<div>
-		<a href="#">4200 Slagelse</a>
-	</div>
-	<div>
-		<a href="#">Danmark</a>
-	</div>
-</div>
-
 
 
 
