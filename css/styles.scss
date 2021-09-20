@@ -3,8 +3,8 @@
 }
 
 body {
-	font-family: sans-serif;
-	margin: 0; /* Ingen kanter i siden af browser */
+	font-family: sans-serif; background-color: lightgray;
+	margin: 10%; /* Ingen kanter i siden af browser */
 }
 
 .text-right{
@@ -16,8 +16,9 @@ body {
 	height: 110vh;
 	position: relative;
 	overflow: hidden;
+	background: url("../images/IMG_20210330_181322.jpg");
 	background-size: cover;
-	background-image: url("images/IMG_20210330_181322.jpg");
+	background-position: center;
 }
 
 .zoom:before{
@@ -66,4 +67,9 @@ body {
 	max-width: 1200px;
 	margin: 0 auto;
 	padding: 1rem;
+}
+
+.iframe{
+	display: block;
+	margin: 0 auto;
 }
